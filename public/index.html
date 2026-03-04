@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Collab Classroom</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.45.0/min/vs/loader.min.js"></script>
+  </head>
+  <body>
+    <main>
+      <section id="loginPanel" class="panel">
+        <h1>Code Collab Classroom</h1>
+        <p>Log in with a dummy student account.</p>
+        <form id="loginForm">
+          <label>
+            Username
+            <input id="username" required />
+          </label>
+          <label>
+            Password
+            <input id="password" type="password" required />
+          </label>
+          <button type="submit">Log in</button>
+        </form>
+        <p id="loginError" class="error"></p>
+      </section>
+
+      <section id="workspace" class="hidden">
+        <header class="toolbar">
+          <div>
+            <strong id="whoami"></strong>
+            <span id="roomLabel"></span>
+          </div>
+          <div>
+            <input id="roomInput" placeholder="room name" />
+            <button id="changeRoom">Join room</button>
+            <button id="logoutBtn">Log out</button>
+          </div>
+        </header>
+
+        <div class="editor-layout">
+          <div class="left">
+            <div class="tabs" id="tabs"></div>
+            <div id="editor"></div>
+          </div>
+          <div class="right">
+            <h3>Live preview</h3>
+            <iframe id="preview" sandbox="allow-scripts"></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

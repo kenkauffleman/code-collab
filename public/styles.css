@@ -1,0 +1,112 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #111827;
+  color: #e5e7eb;
+}
+
+main {
+  padding: 1rem;
+}
+
+.panel {
+  max-width: 420px;
+  margin: 3rem auto;
+  background: #1f2937;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+label {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+input,
+button {
+  width: 100%;
+  margin-top: 0.25rem;
+  border-radius: 8px;
+  border: 1px solid #374151;
+  background: #0f172a;
+  color: #e5e7eb;
+  padding: 0.5rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+.error {
+  color: #fda4af;
+}
+
+.hidden {
+  display: none;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.toolbar input,
+.toolbar button {
+  width: auto;
+  display: inline-block;
+}
+
+.editor-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  height: calc(100vh - 120px);
+}
+
+.left,
+.right {
+  background: #1f2937;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid #374151;
+}
+
+.tab {
+  width: auto;
+  padding: 0.35rem 0.75rem;
+}
+
+.tab.active {
+  border-color: #60a5fa;
+}
+
+#editor {
+  height: 100%;
+}
+
+.right h3 {
+  margin: 0;
+  padding: 0.5rem;
+  border-bottom: 1px solid #374151;
+}
+
+#preview {
+  flex: 1;
+  border: 0;
+  background: white;
+}
